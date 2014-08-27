@@ -9,12 +9,7 @@
 #import "ANIMyScene.h"
 #import "ANIGameOver.h"
 
-@implementation ANIMyScene{
-    SKSpriteNode *_et;
-    SKSpriteNode *_planeta;
-    SKLabelNode *_scoreLabel;
-    
-}
+@implementation ANIMyScene
 
 -(id)initWithSize:(CGSize)size {
     if (self = [super initWithSize:size]) {
@@ -23,28 +18,32 @@
         bg.position = CGPointMake(self.size.width/2, self.size.height/2);
         [self addChild:bg];
         
-        _planeta = [SKSpriteNode spriteNodeWithImageNamed:@"lua2"];
-        [_planeta setScale:1.5]; // diminuir a escala do planeta
-        _planeta.position = CGPointMake(self.size.width/2, self.size.height);
-        [self addChild:_planeta];
+        self.planeta = [SKSpriteNode spriteNodeWithImageNamed:@"lua2"];
+        [self.planeta setScale:1.5]; // diminuir a escala do planeta
+        self.planeta.position = CGPointMake(self.size.width/2, self.size.height);
+        [self addChild:self.planeta];
         
         
-        _et = [SKSpriteNode spriteNodeWithImageNamed:@"et_main"];
-        [_et setScale:0.15]; // diminuir a escala do et
-        _et.zRotation = M_PI; // girar o et de cabeca pra baixo
-        _et.position = CGPointMake(self.size.width/2, self.size.height - self.size.height/4);
+        self.et = [SKSpriteNode spriteNodeWithImageNamed:@"et_main"];
+        [self.et setScale:0.15]; // diminuir a escala do et
+        self.et.zRotation = M_PI; // girar o et de cabeca pra baixo
+        self.et.position = CGPointMake(self.size.width/2, self.size.height - self.size.height/4);
         [self addChild:_et];
         
-        //[self rotacaoPlaneta:-M_PI velocidade:1.0 duracao:5.0];
         [self criarCoracao];
+        [self initScroe];
     }
     return self;
+}
+
+- (void)initPhysicsWorld{
+    self.physicsWorld.contactDelegate = self;
+    self.physicsWorld.gravity = CGVectorMake(0,0);
 }
 
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     UITouch *touch = [touches anyObject];
     CGPoint touchLocation = [touch locationInNode:self];
-    NSLog(@"tocou %@",NSStringFromCGPoint(touchLocation));
     [self moveEt:touchLocation.x];
     
 }
@@ -52,39 +51,40 @@
 -(void) touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event{
     UITouch *touch = [touches anyObject];
     CGPoint touchLocation = [touch locationInNode:self];
-    NSLog(@"tocou %@",NSStringFromCGPoint(touchLocation));
+    //NSLog(@"tocou %@",NSStringFromCGPoint(touchLocation));
     [self moveEt:touchLocation.x];
     
 }
 
 -(void)moveEt:(CGFloat)location{
-    SKAction *move = [SKAction moveToX:location duration:1.0];
+    SKAction *move = [SKAction moveToX:location duration:0.5];
     [_et runAction:move];
 }
 
--(void)rotacaoPlaneta:(CGFloat)direcao velocidade:(NSTimeInterval)velocidade duracao:(CGFloat)duracao{
-    SKAction *girar = [SKAction rotateByAngle:direcao duration:velocidade];
-    [_planeta runAction:[SKAction repeatAction:girar count:duracao]];
-    // [sprite runAction:[SKAction repeatActionForever:action]]
-}
-
 -(void) addPedra{
-    self.timePedraCogumelo ++;
+    self.pedraTime++;
     SKSpriteNode *pedra = [SKSpriteNode spriteNodeWithImageNamed:@"projectile"];
     pedra.name = @"pedra";
-    int randX = (arc4random() % 160)+160;
+    float speed = (arc4random() % 3) + 2;
+    int randX = (arc4random() % 320);
     
-    pedra.position = CGPointMake(randX, 0);
+    pedra.position = CGPointMake(randX,0);
     [self addChild:pedra];
-    
-    int minDuration = 2; // para que nao seja muito rapido a velocidade de transicao da pedra, para que seja no minimo 2
-    int randDuration = arc4random() % 4 + minDuration;// soma com o minimo para que caso o rand de 0 soma 2
-    
-    SKAction *move = [SKAction moveToY:1000 duration:randDuration];
-    [pedra runAction:move];
-    if (self.timePedraCogumelo == 20) {
-        [self addCogumelo];
-        self.timePedraCogumelo = 0;
+    [pedra runAction:[SKAction sequence:@[[SKAction moveToY:self.size.height duration:speed],
+                                          [SKAction removeFromParent]]]];
+    //metodo de adicionar os diamantes a cada 10 pedras.
+    if (self.pedraTime == 2) {
+        SKSpriteNode *diamante = [SKSpriteNode spriteNodeWithImageNamed:@"diamante"];
+        diamante.name = @"diamante";
+        [diamante setScale:0.15];
+        float speed = (arc4random() % 4) + 2;
+        int randX = (arc4random() % 320);
+        
+        diamante.position = CGPointMake(randX,0);
+        [self addChild:diamante];
+        [diamante runAction:[SKAction sequence:@[[SKAction moveToY:self.size.height duration:speed],
+                                                 [SKAction removeFromParent]]]];
+        self.pedraTime = 0;
     }
 }
 
@@ -113,8 +113,7 @@
     }
     [self updateWithTimeSinceLastUpdate:timeSinceLast];
     [self checarColisao];
-    [self initScroe];
-    
+    [self somaScore];
 }
 
 -(void) checarColisao
@@ -125,7 +124,7 @@
         
         SKSpriteNode * pedra = (SKSpriteNode *)node;
         if (CGRectIntersectsRect(pedra.frame, _et.frame)) {
-            NSLog(@"agora foi...");
+            //NSLog(@"agora foi...");
             // Aqui vamos tirar uma vida
             // Aqui removemos a pedra da cena
             [pedra removeFromParent];
@@ -134,7 +133,7 @@
     }];
     if (lista.count == 1) {
         SKTransition *reveal = [SKTransition flipHorizontalWithDuration:0.5];
-        SKScene * gameOverScene = [[ANIGameOver alloc]initWithSize:self.size score:0];//[[ANIGameOver alloc] initWithSize:self.size won:YES];
+        SKScene * gameOverScene = [[ANIGameOver alloc]initWithSize:self.size score:self.score];
         [self.view presentScene:gameOverScene transition: reveal];
     }
 }
@@ -151,7 +150,6 @@
     [coracao2 setScale:0.2];
     [coracao3 setScale:0.2];
     
-    //coracao1.position = CGPointMake(200,555);
     coracao1.position = CGPointMake(50, 30);
     coracao2.position = CGPointMake(77, 30);
     coracao3.position = CGPointMake(104, 30);
@@ -173,26 +171,24 @@
 }
 
 - (void)initScroe{
-    // MarkerFelt-Thin = é o nome da fonte do label.
     _scoreLabel = [SKLabelNode labelNodeWithFontNamed:@"Chalkduster"];
     _scoreLabel.text = @"00";
-    //_scoreLabel.zPosition = 2;
     _scoreLabel.fontColor = [SKColor whiteColor];
     _scoreLabel.horizontalAlignmentMode = SKLabelHorizontalAlignmentModeLeft;
-    _scoreLabel.position = CGPointMake(200 , 20);
+    _scoreLabel.position = CGPointMake(250 , 20);
     [self addChild:_scoreLabel];
 }
--(void) addCogumelo {
-    SKSpriteNode *cogumelo = [SKSpriteNode spriteNodeWithImageNamed:@"cogumelo"];
-    cogumelo.name = @"cogumelo";
-    int randX = arc4random() % 320;
-    cogumelo.position = CGPointMake(randX, 0);
-    [cogumelo setScale:0.033];
-    SKAction *move = [SKAction moveToY:1000 duration:2.0];
-    
-    [self addChild:cogumelo];
-    [cogumelo runAction:move];
-    
-}
 
+- (void)somaScore{
+    [self enumerateChildNodesWithName:@"diamante" usingBlock:^(SKNode * node,BOOL * stop){
+        
+        SKSpriteNode * diamante = (SKSpriteNode *)node;
+        if (CGRectIntersectsRect(diamante.frame, self.et.frame)) {
+            [diamante removeFromParent];
+            self.score += 1;
+            NSLog(@"%d",self.score);
+            _scoreLabel.text = [NSString stringWithFormat:@"0%d",_scoreLabel.text.intValue + self.score];
+        }
+    }];
+}
 @end

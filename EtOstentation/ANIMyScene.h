@@ -10,8 +10,12 @@
 
 @interface ANIMyScene : SKScene <SKPhysicsContactDelegate>
 
+@property (nonatomic,assign) int pedraTime;
+@property (nonatomic,assign) int score;
+@property (nonatomic) SKSpriteNode *et;
+@property (nonatomic) SKSpriteNode *planeta;
+@property (nonatomic) SKLabelNode *scoreLabel;
 @property (nonatomic) NSTimeInterval lastSpawnTimeInterval;
 @property (nonatomic) NSTimeInterval lastUpdadeTimeInterval;
-@property (nonatomic) int timePedraCogumelo;
 
 @end
