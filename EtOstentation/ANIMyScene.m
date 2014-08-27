@@ -25,7 +25,7 @@
         
         
         self.et = [SKSpriteNode spriteNodeWithImageNamed:@"et_main"];
-        [self.et setScale:0.15]; // diminuir a escala do et
+        [self.et setScale:0.12]; // diminuir a escala do et
         self.et.zRotation = M_PI; // girar o et de cabeca pra baixo
         self.et.position = CGPointMake(self.size.width/2, self.size.height - self.size.height/4);
         [self addChild:_et];
