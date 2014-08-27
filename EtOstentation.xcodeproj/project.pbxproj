@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7212669419AE699A006F7534 /* bg-music.caf in Resources */ = {isa = PBXBuildFile; fileRef = 7212668B19AE699A006F7534 /* bg-music.caf */; };
+		7212669519AE699A006F7534 /* coracao.png in Resources */ = {isa = PBXBuildFile; fileRef = 7212668C19AE699A006F7534 /* coracao.png */; };
+		7212669619AE699A006F7534 /* diamante.png in Resources */ = {isa = PBXBuildFile; fileRef = 7212668D19AE699A006F7534 /* diamante.png */; };
+		7212669719AE699A006F7534 /* et_main.png in Resources */ = {isa = PBXBuildFile; fileRef = 7212668E19AE699A006F7534 /* et_main.png */; };
+		7212669819AE699A006F7534 /* lua.png in Resources */ = {isa = PBXBuildFile; fileRef = 7212668F19AE699A006F7534 /* lua.png */; };
+		7212669919AE699A006F7534 /* lua2.png in Resources */ = {isa = PBXBuildFile; fileRef = 7212669019AE699A006F7534 /* lua2.png */; };
+		7212669A19AE699A006F7534 /* play.png in Resources */ = {isa = PBXBuildFile; fileRef = 7212669119AE699A006F7534 /* play.png */; };
+		7212669B19AE699A006F7534 /* projectile.png in Resources */ = {isa = PBXBuildFile; fileRef = 7212669219AE699A006F7534 /* projectile.png */; };
+		7212669C19AE699A006F7534 /* sky.png in Resources */ = {isa = PBXBuildFile; fileRef = 7212669319AE699A006F7534 /* sky.png */; };
 		72CF32B019AE61F400FCE063 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72CF32AF19AE61F400FCE063 /* Foundation.framework */; };
 		72CF32B219AE61F400FCE063 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72CF32B119AE61F400FCE063 /* CoreGraphics.framework */; };
 		72CF32B419AE61F400FCE063 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72CF32B319AE61F400FCE063 /* UIKit.framework */; };
@@ -17,7 +26,6 @@
 		72CF32C519AE61F400FCE063 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72CF32C319AE61F400FCE063 /* Main.storyboard */; };
 		72CF32C819AE61F400FCE063 /* ANIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 72CF32C719AE61F400FCE063 /* ANIViewController.m */; };
 		72CF32CB19AE61F400FCE063 /* ANIMyScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 72CF32CA19AE61F400FCE063 /* ANIMyScene.m */; };
-		72CF32CD19AE61F400FCE063 /* Spaceship.png in Resources */ = {isa = PBXBuildFile; fileRef = 72CF32CC19AE61F400FCE063 /* Spaceship.png */; };
 		72CF32CF19AE61F400FCE063 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72CF32CE19AE61F400FCE063 /* Images.xcassets */; };
 		72CF32D619AE61F400FCE063 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72CF32D519AE61F400FCE063 /* XCTest.framework */; };
 		72CF32D719AE61F400FCE063 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72CF32AF19AE61F400FCE063 /* Foundation.framework */; };
@@ -26,13 +34,6 @@
 		72CF32E219AE61F400FCE063 /* EtOstentationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 72CF32E119AE61F400FCE063 /* EtOstentationTests.m */; };
 		72CF32ED19AE633700FCE063 /* ANIStart.m in Sources */ = {isa = PBXBuildFile; fileRef = 72CF32EC19AE633700FCE063 /* ANIStart.m */; };
 		72CF32F019AE63D300FCE063 /* ANIGameOver.m in Sources */ = {isa = PBXBuildFile; fileRef = 72CF32EF19AE63D300FCE063 /* ANIGameOver.m */; };
-		72CF32F919AE649800FCE063 /* bg-music.caf in Resources */ = {isa = PBXBuildFile; fileRef = 72CF32F219AE649800FCE063 /* bg-music.caf */; };
-		72CF32FA19AE649800FCE063 /* coracao.png in Resources */ = {isa = PBXBuildFile; fileRef = 72CF32F319AE649800FCE063 /* coracao.png */; };
-		72CF32FB19AE649800FCE063 /* lua.png in Resources */ = {isa = PBXBuildFile; fileRef = 72CF32F419AE649800FCE063 /* lua.png */; };
-		72CF32FC19AE649800FCE063 /* lua2.png in Resources */ = {isa = PBXBuildFile; fileRef = 72CF32F519AE649800FCE063 /* lua2.png */; };
-		72CF32FD19AE649800FCE063 /* play.png in Resources */ = {isa = PBXBuildFile; fileRef = 72CF32F619AE649800FCE063 /* play.png */; };
-		72CF32FE19AE649800FCE063 /* projectile.png in Resources */ = {isa = PBXBuildFile; fileRef = 72CF32F719AE649800FCE063 /* projectile.png */; };
-		72CF32FF19AE649800FCE063 /* sky.png in Resources */ = {isa = PBXBuildFile; fileRef = 72CF32F819AE649800FCE063 /* sky.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7212668B19AE699A006F7534 /* bg-music.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "bg-music.caf"; sourceTree = "<group>"; };
+		7212668C19AE699A006F7534 /* coracao.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = coracao.png; sourceTree = "<group>"; };
+		7212668D19AE699A006F7534 /* diamante.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = diamante.png; sourceTree = "<group>"; };
+		7212668E19AE699A006F7534 /* et_main.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = et_main.png; sourceTree = "<group>"; };
+		7212668F19AE699A006F7534 /* lua.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lua.png; sourceTree = "<group>"; };
+		7212669019AE699A006F7534 /* lua2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lua2.png; sourceTree = "<group>"; };
+		7212669119AE699A006F7534 /* play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = play.png; sourceTree = "<group>"; };
+		7212669219AE699A006F7534 /* projectile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = projectile.png; sourceTree = "<group>"; };
+		7212669319AE699A006F7534 /* sky.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sky.png; sourceTree = "<group>"; };
 		72CF32AC19AE61F400FCE063 /* EtOstentation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EtOstentation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		72CF32AF19AE61F400FCE063 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		72CF32B119AE61F400FCE063 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -62,7 +72,6 @@
 		72CF32C719AE61F400FCE063 /* ANIViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ANIViewController.m; sourceTree = "<group>"; };
 		72CF32C919AE61F400FCE063 /* ANIMyScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ANIMyScene.h; sourceTree = "<group>"; };
 		72CF32CA19AE61F400FCE063 /* ANIMyScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ANIMyScene.m; sourceTree = "<group>"; };
-		72CF32CC19AE61F400FCE063 /* Spaceship.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Spaceship.png; sourceTree = "<group>"; };
 		72CF32CE19AE61F400FCE063 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		72CF32D419AE61F400FCE063 /* EtOstentationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EtOstentationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		72CF32D519AE61F400FCE063 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -73,13 +82,6 @@
 		72CF32EC19AE633700FCE063 /* ANIStart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANIStart.m; sourceTree = "<group>"; };
 		72CF32EE19AE63D300FCE063 /* ANIGameOver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANIGameOver.h; sourceTree = "<group>"; };
 		72CF32EF19AE63D300FCE063 /* ANIGameOver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANIGameOver.m; sourceTree = "<group>"; };
-		72CF32F219AE649800FCE063 /* bg-music.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "bg-music.caf"; sourceTree = "<group>"; };
-		72CF32F319AE649800FCE063 /* coracao.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = coracao.png; sourceTree = "<group>"; };
-		72CF32F419AE649800FCE063 /* lua.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lua.png; sourceTree = "<group>"; };
-		72CF32F519AE649800FCE063 /* lua2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lua2.png; sourceTree = "<group>"; };
-		72CF32F619AE649800FCE063 /* play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = play.png; sourceTree = "<group>"; };
-		72CF32F719AE649800FCE063 /* projectile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = projectile.png; sourceTree = "<group>"; };
-		72CF32F819AE649800FCE063 /* sky.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sky.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7212668A19AE699A006F7534 /* imagens */ = {
+			isa = PBXGroup;
+			children = (
+				7212668B19AE699A006F7534 /* bg-music.caf */,
+				7212668C19AE699A006F7534 /* coracao.png */,
+				7212668D19AE699A006F7534 /* diamante.png */,
+				7212668E19AE699A006F7534 /* et_main.png */,
+				7212668F19AE699A006F7534 /* lua.png */,
+				7212669019AE699A006F7534 /* lua2.png */,
+				7212669119AE699A006F7534 /* play.png */,
+				7212669219AE699A006F7534 /* projectile.png */,
+				7212669319AE699A006F7534 /* sky.png */,
+			);
+			path = imagens;
+			sourceTree = "<group>";
+		};
 		72CF32A319AE61F400FCE063 = {
 			isa = PBXGroup;
 			children = (
@@ -141,7 +159,7 @@
 		72CF32B719AE61F400FCE063 /* EtOstentation */ = {
 			isa = PBXGroup;
 			children = (
-				72CF32F119AE649800FCE063 /* imagens */,
+				7212668A19AE699A006F7534 /* imagens */,
 				72CF32C019AE61F400FCE063 /* ANIAppDelegate.h */,
 				72CF32C119AE61F400FCE063 /* ANIAppDelegate.m */,
 				72CF32C319AE61F400FCE063 /* Main.storyboard */,
@@ -153,7 +171,6 @@
 				72CF32CA19AE61F400FCE063 /* ANIMyScene.m */,
 				72CF32EE19AE63D300FCE063 /* ANIGameOver.h */,
 				72CF32EF19AE63D300FCE063 /* ANIGameOver.m */,
-				72CF32CC19AE61F400FCE063 /* Spaceship.png */,
 				72CF32CE19AE61F400FCE063 /* Images.xcassets */,
 				72CF32B819AE61F400FCE063 /* Supporting Files */,
 			);
@@ -187,20 +204,6 @@
 				72CF32DE19AE61F400FCE063 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		72CF32F119AE649800FCE063 /* imagens */ = {
-			isa = PBXGroup;
-			children = (
-				72CF32F219AE649800FCE063 /* bg-music.caf */,
-				72CF32F319AE649800FCE063 /* coracao.png */,
-				72CF32F419AE649800FCE063 /* lua.png */,
-				72CF32F519AE649800FCE063 /* lua2.png */,
-				72CF32F619AE649800FCE063 /* play.png */,
-				72CF32F719AE649800FCE063 /* projectile.png */,
-				72CF32F819AE649800FCE063 /* sky.png */,
-			);
-			path = imagens;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -280,17 +283,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				72CF32FB19AE649800FCE063 /* lua.png in Resources */,
-				72CF32F919AE649800FCE063 /* bg-music.caf in Resources */,
-				72CF32FE19AE649800FCE063 /* projectile.png in Resources */,
-				72CF32FD19AE649800FCE063 /* play.png in Resources */,
 				72CF32BC19AE61F400FCE063 /* InfoPlist.strings in Resources */,
+				7212669A19AE699A006F7534 /* play.png in Resources */,
 				72CF32CF19AE61F400FCE063 /* Images.xcassets in Resources */,
-				72CF32CD19AE61F400FCE063 /* Spaceship.png in Resources */,
-				72CF32FA19AE649800FCE063 /* coracao.png in Resources */,
+				7212669919AE699A006F7534 /* lua2.png in Resources */,
+				7212669B19AE699A006F7534 /* projectile.png in Resources */,
 				72CF32C519AE61F400FCE063 /* Main.storyboard in Resources */,
-				72CF32FF19AE649800FCE063 /* sky.png in Resources */,
-				72CF32FC19AE649800FCE063 /* lua2.png in Resources */,
+				7212669419AE699A006F7534 /* bg-music.caf in Resources */,
+				7212669819AE699A006F7534 /* lua.png in Resources */,
+				7212669619AE699A006F7534 /* diamante.png in Resources */,
+				7212669C19AE699A006F7534 /* sky.png in Resources */,
+				7212669519AE699A006F7534 /* coracao.png in Resources */,
+				7212669719AE699A006F7534 /* et_main.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -521,6 +525,7 @@
 				72CF32E719AE61F400FCE063 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		72CF32E819AE61F400FCE063 /* Build configuration list for PBXNativeTarget "EtOstentationTests" */ = {
 			isa = XCConfigurationList;
@@ -529,6 +534,7 @@
 				72CF32EA19AE61F400FCE063 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -170,7 +170,7 @@
 - (void)initScroe{
     // MarkerFelt-Thin = é o nome da fonte do label.
     _scoreLabel = [SKLabelNode labelNodeWithFontNamed:@"Chalkduster"];
-    _scoreLabel.text = @"0000";
+    _scoreLabel.text = @"00";
     //_scoreLabel.zPosition = 2;
     _scoreLabel.fontColor = [SKColor whiteColor];
     _scoreLabel.horizontalAlignmentMode = SKLabelHorizontalAlignmentModeLeft;

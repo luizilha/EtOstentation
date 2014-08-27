@@ -47,7 +47,6 @@
         [start setScale:1];
         start.position = CGPointMake(160, 200);
         [self addChild:start];
-        
     }
     return  self;
 }
