@@ -69,6 +69,7 @@
 }
 
 -(void) addPedra{
+    self.timePedraCogumelo ++;
     SKSpriteNode *pedra = [SKSpriteNode spriteNodeWithImageNamed:@"projectile"];
     pedra.name = @"pedra";
     int randX = (arc4random() % 160)+160;
@@ -81,6 +82,10 @@
     
     SKAction *move = [SKAction moveToY:1000 duration:randDuration];
     [pedra runAction:move];
+    if (self.timePedraCogumelo == 20) {
+        [self addCogumelo];
+        self.timePedraCogumelo = 0;
+    }
 }
 
 
@@ -177,4 +182,17 @@
     _scoreLabel.position = CGPointMake(200 , 20);
     [self addChild:_scoreLabel];
 }
+-(void) addCogumelo{
+    SKSpriteNode *cogumelo = [SKSpriteNode spriteNodeWithImageNamed:@"cogumelo"];
+    cogumelo.name = @"cogumelo";
+    int randX = arc4random() % 320;
+    cogumelo.position = CGPointMake(randX, 0);
+    [cogumelo setScale:0.033];
+    SKAction *move = [SKAction moveToY:1000 duration:2.0];
+    
+    [self addChild:cogumelo];
+    [cogumelo runAction:move];
+    
+}
+
 @end
