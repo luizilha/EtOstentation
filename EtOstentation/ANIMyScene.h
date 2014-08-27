@@ -8,6 +8,9 @@
 
 #import <SpriteKit/SpriteKit.h>
 
-@interface ANIMyScene : SKScene
+@interface ANIMyScene : SKScene <SKPhysicsContactDelegate>
+
+@property (nonatomic) NSTimeInterval lastSpawnTimeInterval;
+@property (nonatomic) NSTimeInterval lastUpdadeTimeInterval;
 
 @end

@@ -24,6 +24,15 @@
 		72CF32D819AE61F400FCE063 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72CF32B319AE61F400FCE063 /* UIKit.framework */; };
 		72CF32E019AE61F400FCE063 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 72CF32DE19AE61F400FCE063 /* InfoPlist.strings */; };
 		72CF32E219AE61F400FCE063 /* EtOstentationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 72CF32E119AE61F400FCE063 /* EtOstentationTests.m */; };
+		72CF32ED19AE633700FCE063 /* ANIStart.m in Sources */ = {isa = PBXBuildFile; fileRef = 72CF32EC19AE633700FCE063 /* ANIStart.m */; };
+		72CF32F019AE63D300FCE063 /* ANIGameOver.m in Sources */ = {isa = PBXBuildFile; fileRef = 72CF32EF19AE63D300FCE063 /* ANIGameOver.m */; };
+		72CF32F919AE649800FCE063 /* bg-music.caf in Resources */ = {isa = PBXBuildFile; fileRef = 72CF32F219AE649800FCE063 /* bg-music.caf */; };
+		72CF32FA19AE649800FCE063 /* coracao.png in Resources */ = {isa = PBXBuildFile; fileRef = 72CF32F319AE649800FCE063 /* coracao.png */; };
+		72CF32FB19AE649800FCE063 /* lua.png in Resources */ = {isa = PBXBuildFile; fileRef = 72CF32F419AE649800FCE063 /* lua.png */; };
+		72CF32FC19AE649800FCE063 /* lua2.png in Resources */ = {isa = PBXBuildFile; fileRef = 72CF32F519AE649800FCE063 /* lua2.png */; };
+		72CF32FD19AE649800FCE063 /* play.png in Resources */ = {isa = PBXBuildFile; fileRef = 72CF32F619AE649800FCE063 /* play.png */; };
+		72CF32FE19AE649800FCE063 /* projectile.png in Resources */ = {isa = PBXBuildFile; fileRef = 72CF32F719AE649800FCE063 /* projectile.png */; };
+		72CF32FF19AE649800FCE063 /* sky.png in Resources */ = {isa = PBXBuildFile; fileRef = 72CF32F819AE649800FCE063 /* sky.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +69,17 @@
 		72CF32DD19AE61F400FCE063 /* EtOstentationTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "EtOstentationTests-Info.plist"; sourceTree = "<group>"; };
 		72CF32DF19AE61F400FCE063 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		72CF32E119AE61F400FCE063 /* EtOstentationTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EtOstentationTests.m; sourceTree = "<group>"; };
+		72CF32EB19AE633700FCE063 /* ANIStart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANIStart.h; sourceTree = "<group>"; };
+		72CF32EC19AE633700FCE063 /* ANIStart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANIStart.m; sourceTree = "<group>"; };
+		72CF32EE19AE63D300FCE063 /* ANIGameOver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANIGameOver.h; sourceTree = "<group>"; };
+		72CF32EF19AE63D300FCE063 /* ANIGameOver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANIGameOver.m; sourceTree = "<group>"; };
+		72CF32F219AE649800FCE063 /* bg-music.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "bg-music.caf"; sourceTree = "<group>"; };
+		72CF32F319AE649800FCE063 /* coracao.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = coracao.png; sourceTree = "<group>"; };
+		72CF32F419AE649800FCE063 /* lua.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lua.png; sourceTree = "<group>"; };
+		72CF32F519AE649800FCE063 /* lua2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lua2.png; sourceTree = "<group>"; };
+		72CF32F619AE649800FCE063 /* play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = play.png; sourceTree = "<group>"; };
+		72CF32F719AE649800FCE063 /* projectile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = projectile.png; sourceTree = "<group>"; };
+		72CF32F819AE649800FCE063 /* sky.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sky.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,13 +141,18 @@
 		72CF32B719AE61F400FCE063 /* EtOstentation */ = {
 			isa = PBXGroup;
 			children = (
+				72CF32F119AE649800FCE063 /* imagens */,
 				72CF32C019AE61F400FCE063 /* ANIAppDelegate.h */,
 				72CF32C119AE61F400FCE063 /* ANIAppDelegate.m */,
 				72CF32C319AE61F400FCE063 /* Main.storyboard */,
 				72CF32C619AE61F400FCE063 /* ANIViewController.h */,
 				72CF32C719AE61F400FCE063 /* ANIViewController.m */,
+				72CF32EB19AE633700FCE063 /* ANIStart.h */,
+				72CF32EC19AE633700FCE063 /* ANIStart.m */,
 				72CF32C919AE61F400FCE063 /* ANIMyScene.h */,
 				72CF32CA19AE61F400FCE063 /* ANIMyScene.m */,
+				72CF32EE19AE63D300FCE063 /* ANIGameOver.h */,
+				72CF32EF19AE63D300FCE063 /* ANIGameOver.m */,
 				72CF32CC19AE61F400FCE063 /* Spaceship.png */,
 				72CF32CE19AE61F400FCE063 /* Images.xcassets */,
 				72CF32B819AE61F400FCE063 /* Supporting Files */,
@@ -162,6 +187,20 @@
 				72CF32DE19AE61F400FCE063 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		72CF32F119AE649800FCE063 /* imagens */ = {
+			isa = PBXGroup;
+			children = (
+				72CF32F219AE649800FCE063 /* bg-music.caf */,
+				72CF32F319AE649800FCE063 /* coracao.png */,
+				72CF32F419AE649800FCE063 /* lua.png */,
+				72CF32F519AE649800FCE063 /* lua2.png */,
+				72CF32F619AE649800FCE063 /* play.png */,
+				72CF32F719AE649800FCE063 /* projectile.png */,
+				72CF32F819AE649800FCE063 /* sky.png */,
+			);
+			path = imagens;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -241,10 +280,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				72CF32FB19AE649800FCE063 /* lua.png in Resources */,
+				72CF32F919AE649800FCE063 /* bg-music.caf in Resources */,
+				72CF32FE19AE649800FCE063 /* projectile.png in Resources */,
+				72CF32FD19AE649800FCE063 /* play.png in Resources */,
 				72CF32BC19AE61F400FCE063 /* InfoPlist.strings in Resources */,
 				72CF32CF19AE61F400FCE063 /* Images.xcassets in Resources */,
 				72CF32CD19AE61F400FCE063 /* Spaceship.png in Resources */,
+				72CF32FA19AE649800FCE063 /* coracao.png in Resources */,
 				72CF32C519AE61F400FCE063 /* Main.storyboard in Resources */,
+				72CF32FF19AE649800FCE063 /* sky.png in Resources */,
+				72CF32FC19AE649800FCE063 /* lua2.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,8 +310,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				72CF32C819AE61F400FCE063 /* ANIViewController.m in Sources */,
+				72CF32ED19AE633700FCE063 /* ANIStart.m in Sources */,
 				72CF32BE19AE61F400FCE063 /* main.m in Sources */,
 				72CF32C219AE61F400FCE063 /* ANIAppDelegate.m in Sources */,
+				72CF32F019AE63D300FCE063 /* ANIGameOver.m in Sources */,
 				72CF32CB19AE61F400FCE063 /* ANIMyScene.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
