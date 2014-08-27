@@ -33,6 +33,7 @@
 		72CF32FD19AE649800FCE063 /* play.png in Resources */ = {isa = PBXBuildFile; fileRef = 72CF32F619AE649800FCE063 /* play.png */; };
 		72CF32FE19AE649800FCE063 /* projectile.png in Resources */ = {isa = PBXBuildFile; fileRef = 72CF32F719AE649800FCE063 /* projectile.png */; };
 		72CF32FF19AE649800FCE063 /* sky.png in Resources */ = {isa = PBXBuildFile; fileRef = 72CF32F819AE649800FCE063 /* sky.png */; };
+		A1355ACD19AE67F6002DE47C /* cogumelo.png in Resources */ = {isa = PBXBuildFile; fileRef = A1355ACC19AE67F6002DE47C /* cogumelo.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +81,7 @@
 		72CF32F619AE649800FCE063 /* play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = play.png; sourceTree = "<group>"; };
 		72CF32F719AE649800FCE063 /* projectile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = projectile.png; sourceTree = "<group>"; };
 		72CF32F819AE649800FCE063 /* sky.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sky.png; sourceTree = "<group>"; };
+		A1355ACC19AE67F6002DE47C /* cogumelo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cogumelo.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -193,6 +195,7 @@
 			isa = PBXGroup;
 			children = (
 				72CF32F219AE649800FCE063 /* bg-music.caf */,
+				A1355ACC19AE67F6002DE47C /* cogumelo.png */,
 				72CF32F319AE649800FCE063 /* coracao.png */,
 				72CF32F419AE649800FCE063 /* lua.png */,
 				72CF32F519AE649800FCE063 /* lua2.png */,
@@ -282,6 +285,7 @@
 			files = (
 				72CF32FB19AE649800FCE063 /* lua.png in Resources */,
 				72CF32F919AE649800FCE063 /* bg-music.caf in Resources */,
+				A1355ACD19AE67F6002DE47C /* cogumelo.png in Resources */,
 				72CF32FE19AE649800FCE063 /* projectile.png in Resources */,
 				72CF32FD19AE649800FCE063 /* play.png in Resources */,
 				72CF32BC19AE61F400FCE063 /* InfoPlist.strings in Resources */,
@@ -521,6 +525,7 @@
 				72CF32E719AE61F400FCE063 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		72CF32E819AE61F400FCE063 /* Build configuration list for PBXNativeTarget "EtOstentationTests" */ = {
 			isa = XCConfigurationList;
@@ -529,6 +534,7 @@
 				72CF32EA19AE61F400FCE063 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

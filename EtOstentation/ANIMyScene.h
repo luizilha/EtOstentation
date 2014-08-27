@@ -12,5 +12,6 @@
 
 @property (nonatomic) NSTimeInterval lastSpawnTimeInterval;
 @property (nonatomic) NSTimeInterval lastUpdadeTimeInterval;
+@property (nonatomic) int timePedraCogumelo;
 
 @end
