@@ -1,0 +1,488 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		72CF32B019AE61F400FCE063 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72CF32AF19AE61F400FCE063 /* Foundation.framework */; };
+		72CF32B219AE61F400FCE063 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72CF32B119AE61F400FCE063 /* CoreGraphics.framework */; };
+		72CF32B419AE61F400FCE063 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72CF32B319AE61F400FCE063 /* UIKit.framework */; };
+		72CF32B619AE61F400FCE063 /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72CF32B519AE61F400FCE063 /* SpriteKit.framework */; };
+		72CF32BC19AE61F400FCE063 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 72CF32BA19AE61F400FCE063 /* InfoPlist.strings */; };
+		72CF32BE19AE61F400FCE063 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 72CF32BD19AE61F400FCE063 /* main.m */; };
+		72CF32C219AE61F400FCE063 /* ANIAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 72CF32C119AE61F400FCE063 /* ANIAppDelegate.m */; };
+		72CF32C519AE61F400FCE063 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72CF32C319AE61F400FCE063 /* Main.storyboard */; };
+		72CF32C819AE61F400FCE063 /* ANIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 72CF32C719AE61F400FCE063 /* ANIViewController.m */; };
+		72CF32CB19AE61F400FCE063 /* ANIMyScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 72CF32CA19AE61F400FCE063 /* ANIMyScene.m */; };
+		72CF32CD19AE61F400FCE063 /* Spaceship.png in Resources */ = {isa = PBXBuildFile; fileRef = 72CF32CC19AE61F400FCE063 /* Spaceship.png */; };
+		72CF32CF19AE61F400FCE063 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72CF32CE19AE61F400FCE063 /* Images.xcassets */; };
+		72CF32D619AE61F400FCE063 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72CF32D519AE61F400FCE063 /* XCTest.framework */; };
+		72CF32D719AE61F400FCE063 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72CF32AF19AE61F400FCE063 /* Foundation.framework */; };
+		72CF32D819AE61F400FCE063 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72CF32B319AE61F400FCE063 /* UIKit.framework */; };
+		72CF32E019AE61F400FCE063 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 72CF32DE19AE61F400FCE063 /* InfoPlist.strings */; };
+		72CF32E219AE61F400FCE063 /* EtOstentationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 72CF32E119AE61F400FCE063 /* EtOstentationTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		72CF32D919AE61F400FCE063 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 72CF32A419AE61F400FCE063 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 72CF32AB19AE61F400FCE063;
+			remoteInfo = EtOstentation;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		72CF32AC19AE61F400FCE063 /* EtOstentation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EtOstentation.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		72CF32AF19AE61F400FCE063 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		72CF32B119AE61F400FCE063 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		72CF32B319AE61F400FCE063 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		72CF32B519AE61F400FCE063 /* SpriteKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpriteKit.framework; path = System/Library/Frameworks/SpriteKit.framework; sourceTree = SDKROOT; };
+		72CF32B919AE61F400FCE063 /* EtOstentation-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "EtOstentation-Info.plist"; sourceTree = "<group>"; };
+		72CF32BB19AE61F400FCE063 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		72CF32BD19AE61F400FCE063 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		72CF32BF19AE61F400FCE063 /* EtOstentation-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "EtOstentation-Prefix.pch"; sourceTree = "<group>"; };
+		72CF32C019AE61F400FCE063 /* ANIAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ANIAppDelegate.h; sourceTree = "<group>"; };
+		72CF32C119AE61F400FCE063 /* ANIAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ANIAppDelegate.m; sourceTree = "<group>"; };
+		72CF32C419AE61F400FCE063 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		72CF32C619AE61F400FCE063 /* ANIViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ANIViewController.h; sourceTree = "<group>"; };
+		72CF32C719AE61F400FCE063 /* ANIViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ANIViewController.m; sourceTree = "<group>"; };
+		72CF32C919AE61F400FCE063 /* ANIMyScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ANIMyScene.h; sourceTree = "<group>"; };
+		72CF32CA19AE61F400FCE063 /* ANIMyScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ANIMyScene.m; sourceTree = "<group>"; };
+		72CF32CC19AE61F400FCE063 /* Spaceship.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Spaceship.png; sourceTree = "<group>"; };
+		72CF32CE19AE61F400FCE063 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		72CF32D419AE61F400FCE063 /* EtOstentationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EtOstentationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		72CF32D519AE61F400FCE063 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		72CF32DD19AE61F400FCE063 /* EtOstentationTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "EtOstentationTests-Info.plist"; sourceTree = "<group>"; };
+		72CF32DF19AE61F400FCE063 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		72CF32E119AE61F400FCE063 /* EtOstentationTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EtOstentationTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		72CF32A919AE61F400FCE063 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				72CF32B219AE61F400FCE063 /* CoreGraphics.framework in Frameworks */,
+				72CF32B419AE61F400FCE063 /* UIKit.framework in Frameworks */,
+				72CF32B619AE61F400FCE063 /* SpriteKit.framework in Frameworks */,
+				72CF32B019AE61F400FCE063 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		72CF32D119AE61F400FCE063 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				72CF32D619AE61F400FCE063 /* XCTest.framework in Frameworks */,
+				72CF32D819AE61F400FCE063 /* UIKit.framework in Frameworks */,
+				72CF32D719AE61F400FCE063 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		72CF32A319AE61F400FCE063 = {
+			isa = PBXGroup;
+			children = (
+				72CF32B719AE61F400FCE063 /* EtOstentation */,
+				72CF32DB19AE61F400FCE063 /* EtOstentationTests */,
+				72CF32AE19AE61F400FCE063 /* Frameworks */,
+				72CF32AD19AE61F400FCE063 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		72CF32AD19AE61F400FCE063 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				72CF32AC19AE61F400FCE063 /* EtOstentation.app */,
+				72CF32D419AE61F400FCE063 /* EtOstentationTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		72CF32AE19AE61F400FCE063 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				72CF32AF19AE61F400FCE063 /* Foundation.framework */,
+				72CF32B119AE61F400FCE063 /* CoreGraphics.framework */,
+				72CF32B319AE61F400FCE063 /* UIKit.framework */,
+				72CF32B519AE61F400FCE063 /* SpriteKit.framework */,
+				72CF32D519AE61F400FCE063 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		72CF32B719AE61F400FCE063 /* EtOstentation */ = {
+			isa = PBXGroup;
+			children = (
+				72CF32C019AE61F400FCE063 /* ANIAppDelegate.h */,
+				72CF32C119AE61F400FCE063 /* ANIAppDelegate.m */,
+				72CF32C319AE61F400FCE063 /* Main.storyboard */,
+				72CF32C619AE61F400FCE063 /* ANIViewController.h */,
+				72CF32C719AE61F400FCE063 /* ANIViewController.m */,
+				72CF32C919AE61F400FCE063 /* ANIMyScene.h */,
+				72CF32CA19AE61F400FCE063 /* ANIMyScene.m */,
+				72CF32CC19AE61F400FCE063 /* Spaceship.png */,
+				72CF32CE19AE61F400FCE063 /* Images.xcassets */,
+				72CF32B819AE61F400FCE063 /* Supporting Files */,
+			);
+			path = EtOstentation;
+			sourceTree = "<group>";
+		};
+		72CF32B819AE61F400FCE063 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				72CF32B919AE61F400FCE063 /* EtOstentation-Info.plist */,
+				72CF32BA19AE61F400FCE063 /* InfoPlist.strings */,
+				72CF32BD19AE61F400FCE063 /* main.m */,
+				72CF32BF19AE61F400FCE063 /* EtOstentation-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		72CF32DB19AE61F400FCE063 /* EtOstentationTests */ = {
+			isa = PBXGroup;
+			children = (
+				72CF32E119AE61F400FCE063 /* EtOstentationTests.m */,
+				72CF32DC19AE61F400FCE063 /* Supporting Files */,
+			);
+			path = EtOstentationTests;
+			sourceTree = "<group>";
+		};
+		72CF32DC19AE61F400FCE063 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				72CF32DD19AE61F400FCE063 /* EtOstentationTests-Info.plist */,
+				72CF32DE19AE61F400FCE063 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		72CF32AB19AE61F400FCE063 /* EtOstentation */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 72CF32E519AE61F400FCE063 /* Build configuration list for PBXNativeTarget "EtOstentation" */;
+			buildPhases = (
+				72CF32A819AE61F400FCE063 /* Sources */,
+				72CF32A919AE61F400FCE063 /* Frameworks */,
+				72CF32AA19AE61F400FCE063 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EtOstentation;
+			productName = EtOstentation;
+			productReference = 72CF32AC19AE61F400FCE063 /* EtOstentation.app */;
+			productType = "com.apple.product-type.application";
+		};
+		72CF32D319AE61F400FCE063 /* EtOstentationTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 72CF32E819AE61F400FCE063 /* Build configuration list for PBXNativeTarget "EtOstentationTests" */;
+			buildPhases = (
+				72CF32D019AE61F400FCE063 /* Sources */,
+				72CF32D119AE61F400FCE063 /* Frameworks */,
+				72CF32D219AE61F400FCE063 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				72CF32DA19AE61F400FCE063 /* PBXTargetDependency */,
+			);
+			name = EtOstentationTests;
+			productName = EtOstentationTests;
+			productReference = 72CF32D419AE61F400FCE063 /* EtOstentationTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		72CF32A419AE61F400FCE063 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = ANI;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = ani;
+				TargetAttributes = {
+					72CF32D319AE61F400FCE063 = {
+						TestTargetID = 72CF32AB19AE61F400FCE063;
+					};
+				};
+			};
+			buildConfigurationList = 72CF32A719AE61F400FCE063 /* Build configuration list for PBXProject "EtOstentation" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 72CF32A319AE61F400FCE063;
+			productRefGroup = 72CF32AD19AE61F400FCE063 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				72CF32AB19AE61F400FCE063 /* EtOstentation */,
+				72CF32D319AE61F400FCE063 /* EtOstentationTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		72CF32AA19AE61F400FCE063 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				72CF32BC19AE61F400FCE063 /* InfoPlist.strings in Resources */,
+				72CF32CF19AE61F400FCE063 /* Images.xcassets in Resources */,
+				72CF32CD19AE61F400FCE063 /* Spaceship.png in Resources */,
+				72CF32C519AE61F400FCE063 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		72CF32D219AE61F400FCE063 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				72CF32E019AE61F400FCE063 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		72CF32A819AE61F400FCE063 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				72CF32C819AE61F400FCE063 /* ANIViewController.m in Sources */,
+				72CF32BE19AE61F400FCE063 /* main.m in Sources */,
+				72CF32C219AE61F400FCE063 /* ANIAppDelegate.m in Sources */,
+				72CF32CB19AE61F400FCE063 /* ANIMyScene.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		72CF32D019AE61F400FCE063 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				72CF32E219AE61F400FCE063 /* EtOstentationTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		72CF32DA19AE61F400FCE063 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 72CF32AB19AE61F400FCE063 /* EtOstentation */;
+			targetProxy = 72CF32D919AE61F400FCE063 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		72CF32BA19AE61F400FCE063 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				72CF32BB19AE61F400FCE063 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		72CF32C319AE61F400FCE063 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				72CF32C419AE61F400FCE063 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		72CF32DE19AE61F400FCE063 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				72CF32DF19AE61F400FCE063 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		72CF32E319AE61F400FCE063 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		72CF32E419AE61F400FCE063 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		72CF32E619AE61F400FCE063 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "EtOstentation/EtOstentation-Prefix.pch";
+				INFOPLIST_FILE = "EtOstentation/EtOstentation-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		72CF32E719AE61F400FCE063 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "EtOstentation/EtOstentation-Prefix.pch";
+				INFOPLIST_FILE = "EtOstentation/EtOstentation-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		72CF32E919AE61F400FCE063 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/EtOstentation.app/EtOstentation";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "EtOstentation/EtOstentation-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "EtOstentationTests/EtOstentationTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		72CF32EA19AE61F400FCE063 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/EtOstentation.app/EtOstentation";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "EtOstentation/EtOstentation-Prefix.pch";
+				INFOPLIST_FILE = "EtOstentationTests/EtOstentationTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		72CF32A719AE61F400FCE063 /* Build configuration list for PBXProject "EtOstentation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				72CF32E319AE61F400FCE063 /* Debug */,
+				72CF32E419AE61F400FCE063 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		72CF32E519AE61F400FCE063 /* Build configuration list for PBXNativeTarget "EtOstentation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				72CF32E619AE61F400FCE063 /* Debug */,
+				72CF32E719AE61F400FCE063 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		72CF32E819AE61F400FCE063 /* Build configuration list for PBXNativeTarget "EtOstentationTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				72CF32E919AE61F400FCE063 /* Debug */,
+				72CF32EA19AE61F400FCE063 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 72CF32A419AE61F400FCE063 /* Project object */;
+}
