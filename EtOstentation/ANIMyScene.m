@@ -182,7 +182,7 @@
     _scoreLabel.position = CGPointMake(200 , 20);
     [self addChild:_scoreLabel];
 }
--(void) addCogumelo{
+-(void) addCogumelo {
     SKSpriteNode *cogumelo = [SKSpriteNode spriteNodeWithImageNamed:@"cogumelo"];
     cogumelo.name = @"cogumelo";
     int randX = arc4random() % 320;
