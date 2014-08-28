@@ -24,22 +24,16 @@
         [self addChild:self.planeta];
         
         
-        self.et = [SKSpriteNode spriteNodeWithImageNamed:@"et_main"];
-        [self.et setScale:0.12]; // diminuir a escala do et
+        self.et = [SKSpriteNode spriteNodeWithImageNamed:@"et1"];
+        [self.et setScale:0.15]; // diminuir a escala do et
         self.et.zRotation = M_PI; // girar o et de cabeca pra baixo
         self.et.position = CGPointMake(self.size.width/2, self.size.height - self.size.height/4);
         [self addChild:_et];
         
         [self criarCoracao];
         [self initScroe];
-        
     }
     return self;
-}
-
-- (void)initPhysicsWorld{
-    self.physicsWorld.contactDelegate = self;
-    self.physicsWorld.gravity = CGVectorMake(0,0);
 }
 
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
@@ -64,9 +58,11 @@
 
 -(void) addPedra{
     self.pedraTime++;
-    SKSpriteNode *pedra = [SKSpriteNode spriteNodeWithImageNamed:@"projectile"];
+    self.timeScorePedra++;
+    SKSpriteNode *pedra = [SKSpriteNode spriteNodeWithImageNamed:@"meteoro"];
+    [pedra setScale:0.2];
     pedra.name = @"pedra";
-    float speed = (arc4random() % 3) + 2;
+    float speed = (arc4random() % 4) + 1;
     int randX = (arc4random() % 320);
     
     pedra.position = CGPointMake(randX,0);
@@ -74,11 +70,11 @@
     [pedra runAction:[SKAction sequence:@[[SKAction moveToY:self.size.height duration:speed],
                                           [SKAction removeFromParent]]]];
     //metodo de adicionar os diamantes a cada 10 pedras.
-    if (self.pedraTime == 2) {
+    if (self.pedraTime == 5) {
         SKSpriteNode *diamante = [SKSpriteNode spriteNodeWithImageNamed:@"diamante"];
         diamante.name = @"diamante";
         [diamante setScale:0.15];
-        float speed = (arc4random() % 4) + 2;
+        float speed = (arc4random() % 3) + 2;
         int randX = (arc4random() % 320);
         
         diamante.position = CGPointMake(randX,0);
@@ -87,12 +83,6 @@
                                                  [SKAction removeFromParent]]]];
         self.pedraTime = 0;
     }
-}
-
-
--(void)colidePedra:(SKSpriteNode *)pedra
-{
-    [pedra removeFromParent];
 }
 
 -(void) updateWithTimeSinceLastUpdate:(CFTimeInterval)timeSinceLast{
@@ -125,9 +115,7 @@
         
         SKSpriteNode * pedra = (SKSpriteNode *)node;
         if (CGRectIntersectsRect(pedra.frame, _et.frame)) {
-            //NSLog(@"agora foi...");
             // Aqui vamos tirar uma vida
-            // Aqui removemos a pedra da cena
             [pedra removeFromParent];
             [self removerUmCoracao:lista];
         }
@@ -151,9 +139,12 @@
     [coracao2 setScale:0.2];
     [coracao3 setScale:0.2];
     
-    coracao1.position = CGPointMake(50, 30);
-    coracao2.position = CGPointMake(77, 30);
-    coracao3.position = CGPointMake(104, 30);
+    //coracao1.position = CGPointMake(50, 30);
+    //coracao2.position = CGPointMake(77, 30);
+    //coracao3.position = CGPointMake(104, 30);
+    coracao1.position = CGPointMake(50, 550);
+    coracao2.position = CGPointMake(77, 550);
+    coracao3.position = CGPointMake(104, 550);
     
     [self addChild: coracao3];
     [self addChild:coracao2];
@@ -172,11 +163,14 @@
 }
 
 - (void)initScroe{
-    _scoreLabel = [SKLabelNode labelNodeWithFontNamed:@"Chalkduster"];
-    _scoreLabel.text = @"00";
+    //_scoreLabel = [SKLabelNode labelNodeWithFontNamed:@"Chalkduster"];
+    _scoreLabel = [SKLabelNode labelNodeWithFontNamed:@"MarkerFelt-Wide"];
+    //_scoreLabel.text = @"00";
     _scoreLabel.fontColor = [SKColor whiteColor];
     _scoreLabel.horizontalAlignmentMode = SKLabelHorizontalAlignmentModeLeft;
-    _scoreLabel.position = CGPointMake(250 , 20);
+    //_scoreLabel.position = CGPointMake(250 , 20);
+    _scoreLabel.position = CGPointMake(250 , 540);
+    
     [self addChild:_scoreLabel];
 }
 
@@ -186,10 +180,14 @@
         SKSpriteNode * diamante = (SKSpriteNode *)node;
         if (CGRectIntersectsRect(diamante.frame, self.et.frame)) {
             [diamante removeFromParent];
-            self.score += 1;
-            NSLog(@"%d",self.score);
-            _scoreLabel.text = [NSString stringWithFormat:@"0%d",_scoreLabel.text.intValue + self.score];
+            self.score += 100;
+            //NSLog(@"%d",self.score);
         }
     }];
+    if (self.timeScorePedra == 1) {
+        self.score += 10;
+        self.timeScorePedra = 0;
+    }
+    _scoreLabel.text = [NSString stringWithFormat:@"%d",self.score];
 }
 @end

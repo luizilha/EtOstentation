@@ -10,7 +10,6 @@
 #import "ANIMyScene.h"
 
 @implementation ANIGameOver
-
 -(id) initWithSize:(CGSize)size score:(int)score {
     if(self = [super initWithSize:size]){
         
@@ -22,11 +21,9 @@
         planeta.position = CGPointMake(0, self.size.height/2 + self.size.height - self.size.height * 0.78);
         [bg addChild:planeta];
         
-        
-        NSString *pts = [NSString stringWithFormat:@"Score : %d",score];
-        
-        SKLabelNode *msg = [SKLabelNode labelNodeWithFontNamed:@"Chalkduster"];
-        SKLabelNode *pontuacao = [SKLabelNode labelNodeWithFontNamed:@"Chalkduster"];
+        NSString *pts = [NSString stringWithFormat:@"Pontos : %d",score];
+        SKLabelNode *msg = [SKLabelNode labelNodeWithFontNamed:@"MarkerFelt-Wide"];
+        SKLabelNode *pontuacao = [SKLabelNode labelNodeWithFontNamed:@"MarkerFelt-Wide"];
         
         msg.position = CGPointMake(self.size.width/2, self.size.height-200);
         pontuacao.text = pts;
@@ -45,8 +42,9 @@
         SKSpriteNode *start = [SKSpriteNode spriteNodeWithImageNamed:@"play"];
         start.name = @"play";
         [start setScale:1];
-        start.position = CGPointMake(160, 200);
+        start.position = CGPointMake(160, 220);
         [self addChild:start];
+        
     }
     return  self;
 }
