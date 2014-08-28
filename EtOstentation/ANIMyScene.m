@@ -31,7 +31,7 @@
         [self addChild:_et];
         _somDiamante = [SKAction playSoundFileNamed:@"diamantada.mp3" waitForCompletion:NO];
         _somPedrada = [SKAction playSoundFileNamed:@"pedrada.mp3" waitForCompletion:NO];
-        
+        _somGameOver = [SKAction playSoundFileNamed:@"gameOver.mp3" waitForCompletion:NO];
         [self criarCoracao];
         [self initScroe];
     }
@@ -126,7 +126,9 @@
     if (lista.count == 1) {
         SKTransition *reveal = [SKTransition flipHorizontalWithDuration:0.5];
         SKScene * gameOverScene = [[ANIGameOver alloc]initWithSize:self.size score:self.score];
+        [self runAction:_somGameOver];
         [self.view presentScene:gameOverScene transition: reveal];
+        
     }
 }
 

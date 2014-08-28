@@ -21,4 +21,6 @@
 // Sons
 @property (nonatomic) SKAction *somDiamante;
 @property (nonatomic) SKAction *somPedrada;
+@property (nonatomic) SKAction *somGameOver;
+
 @end
