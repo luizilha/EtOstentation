@@ -29,6 +29,8 @@
         self.et.zRotation = M_PI; // girar o et de cabeca pra baixo
         self.et.position = CGPointMake(self.size.width/2, self.size.height - self.size.height/4);
         [self addChild:_et];
+        _somDiamante = [SKAction playSoundFileNamed:@"diamantada.mp3" waitForCompletion:NO];
+        _somPedrada = [SKAction playSoundFileNamed:@"pedrada.mp3" waitForCompletion:NO];
         
         [self criarCoracao];
         [self initScroe];
@@ -118,6 +120,7 @@
             // Aqui vamos tirar uma vida
             [pedra removeFromParent];
             [self removerUmCoracao:lista];
+            [self runAction:_somPedrada];
         }
     }];
     if (lista.count == 1) {
@@ -181,6 +184,7 @@
         if (CGRectIntersectsRect(diamante.frame, self.et.frame)) {
             [diamante removeFromParent];
             self.score += 100;
+            [self runAction: _somDiamante];
             //NSLog(@"%d",self.score);
         }
     }];

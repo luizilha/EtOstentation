@@ -17,6 +17,8 @@
 		36C3762419AFAD5A00B687D4 /* meteoro.png in Resources */ = {isa = PBXBuildFile; fileRef = 36C3761B19AFAD5A00B687D4 /* meteoro.png */; };
 		36C3762519AFAD5A00B687D4 /* play.png in Resources */ = {isa = PBXBuildFile; fileRef = 36C3761C19AFAD5A00B687D4 /* play.png */; };
 		36C3762619AFAD5A00B687D4 /* sky.png in Resources */ = {isa = PBXBuildFile; fileRef = 36C3761D19AFAD5A00B687D4 /* sky.png */; };
+		7236825919AFBED200751489 /* pedrada.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7236825819AFBED200751489 /* pedrada.mp3 */; };
+		7236825B19AFC11400751489 /* diamantada.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7236825A19AFC11400751489 /* diamantada.mp3 */; };
 		72CF32B019AE61F400FCE063 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72CF32AF19AE61F400FCE063 /* Foundation.framework */; };
 		72CF32B219AE61F400FCE063 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72CF32B119AE61F400FCE063 /* CoreGraphics.framework */; };
 		72CF32B419AE61F400FCE063 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72CF32B319AE61F400FCE063 /* UIKit.framework */; };
@@ -56,6 +58,8 @@
 		36C3761B19AFAD5A00B687D4 /* meteoro.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = meteoro.png; sourceTree = "<group>"; };
 		36C3761C19AFAD5A00B687D4 /* play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = play.png; sourceTree = "<group>"; };
 		36C3761D19AFAD5A00B687D4 /* sky.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sky.png; sourceTree = "<group>"; };
+		7236825819AFBED200751489 /* pedrada.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = pedrada.mp3; sourceTree = "<group>"; };
+		7236825A19AFC11400751489 /* diamantada.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = diamantada.mp3; sourceTree = "<group>"; };
 		72CF32AC19AE61F400FCE063 /* EtOstentation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EtOstentation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		72CF32AF19AE61F400FCE063 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		72CF32B119AE61F400FCE063 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -112,6 +116,8 @@
 		36C3761319AFAD1100B687D4 /* sound */ = {
 			isa = PBXGroup;
 			children = (
+				7236825819AFBED200751489 /* pedrada.mp3 */,
+				7236825A19AFC11400751489 /* diamantada.mp3 */,
 			);
 			name = sound;
 			sourceTree = "<group>";
@@ -291,6 +297,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7236825B19AFC11400751489 /* diamantada.mp3 in Resources */,
 				36C3761219AFAC8400B687D4 /* Main.storyboard in Resources */,
 				72CF32BC19AE61F400FCE063 /* InfoPlist.strings in Resources */,
 				36C3762319AFAD5A00B687D4 /* lua2.png in Resources */,
@@ -302,6 +309,7 @@
 				36C3762119AFAD5A00B687D4 /* et1.png in Resources */,
 				36C3762619AFAD5A00B687D4 /* sky.png in Resources */,
 				72CF32CF19AE61F400FCE063 /* Images.xcassets in Resources */,
+				7236825919AFBED200751489 /* pedrada.mp3 in Resources */,
 				36C3762019AFAD5A00B687D4 /* et_main.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

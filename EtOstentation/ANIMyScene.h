@@ -17,4 +17,8 @@
 @property (nonatomic) SKLabelNode *scoreLabel;
 @property (nonatomic) NSTimeInterval lastSpawnTimeInterval;
 @property (nonatomic) NSTimeInterval lastUpdadeTimeInterval;
+
+// Sons
+@property (nonatomic) SKAction *somDiamante;
+@property (nonatomic) SKAction *somPedrada;
 @end
