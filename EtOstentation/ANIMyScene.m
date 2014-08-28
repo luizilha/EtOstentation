@@ -32,6 +32,7 @@
         
         [self criarCoracao];
         [self initScroe];
+        //testando
     }
     return self;
 }
