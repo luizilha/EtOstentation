@@ -201,17 +201,15 @@
         self.score += 10;
         self.timeScorePedra = 0;
     }
-    
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-
-    int melhorScore = 0;
-    
-    melhorScore = [defaults integerForKey:@"score"];
-    
-    
-    if (self.score > melhorScore) {
-        _scoreLabel.fontColor = [SKColor blueColor];
+    if (self.score > 1000) {
+        self.scoreLabel.fontColor = [SKColor yellowColor];
     }
+    if (self.score > 2000) {
+        self.scoreLabel.fontColor = [SKColor redColor];
+    }
+    
+    
+    
     _scoreLabel.text = [NSString stringWithFormat:@"%d",self.score];
     
 }
