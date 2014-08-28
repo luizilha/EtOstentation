@@ -15,6 +15,7 @@
 @property (nonatomic) SKSpriteNode *et;
 @property (nonatomic) SKSpriteNode *planeta;
 @property (nonatomic) SKLabelNode *scoreLabel;
+@property (nonatomic) SKLabelNode *melhorScore;
 @property (nonatomic) NSTimeInterval lastSpawnTimeInterval;
 @property (nonatomic) NSTimeInterval lastUpdadeTimeInterval;
 

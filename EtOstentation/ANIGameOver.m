@@ -12,6 +12,19 @@
 @implementation ANIGameOver
 -(id) initWithSize:(CGSize)size score:(int)score {
     if(self = [super initWithSize:size]){
+        NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+        int melhorScore = [defaults integerForKey:@"score"];
+        
+        SKLabelNode *lblMelhorScore = [SKLabelNode labelNodeWithFontNamed:@"MarkerFelt-Wide"];
+        lblMelhorScore.fontColor = [SKColor yellowColor];
+        lblMelhorScore.fontSize = 25;
+        
+        lblMelhorScore.position = CGPointMake(self.size.width/2, 400);
+        NSString *strMelhorScore = [NSString stringWithFormat:@"Melhor pontuação: %d",melhorScore];
+        lblMelhorScore.text = strMelhorScore;
+
+        
+        
         
         SKSpriteNode *bg = [SKSpriteNode spriteNodeWithImageNamed:@"sky"];
         bg.position = CGPointMake(self.size.width/2, self.size.height/2);
@@ -38,12 +51,17 @@
         [self addChild:bg];
         [self addChild:msg];
         [self addChild:pontuacao];
+        [self addChild:lblMelhorScore];
         
         SKSpriteNode *start = [SKSpriteNode spriteNodeWithImageNamed:@"play"];
         start.name = @"play";
         [start setScale:1];
         start.position = CGPointMake(160, 220);
         [self addChild:start];
+        if (melhorScore < score) {
+            [self saveScore:score];
+        }
+        
         
     }
     return  self;
@@ -64,5 +82,12 @@
         [self.view presentScene:start transition:reveal];
     }];
     [self runAction:block];
+}
+-(void)saveScore :(int)score
+{
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setInteger:score forKey:@"score"];
+    [defaults synchronize];
+    NSLog(@"salvou");
 }
 @end

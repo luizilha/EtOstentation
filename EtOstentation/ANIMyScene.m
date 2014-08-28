@@ -13,6 +13,8 @@
 
 -(id)initWithSize:(CGSize)size {
     if (self = [super initWithSize:size]) {
+        
+        NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
         /* Setup your scene here */
         SKSpriteNode *bg = [SKSpriteNode spriteNodeWithImageNamed:@"sky"];
         bg.position = CGPointMake(self.size.width/2, self.size.height/2);
@@ -23,6 +25,8 @@
         self.planeta.position = CGPointMake(self.size.width/2, self.size.height);
         [self addChild:self.planeta];
         
+        int score = [defaults integerForKey:@"score"];
+        NSLog(@"score passado %d ",score);
         
         self.et = [SKSpriteNode spriteNodeWithImageNamed:@"et1"];
         [self.et setScale:0.15]; // diminuir a escala do et
@@ -168,13 +172,16 @@
 }
 
 - (void)initScroe{
+    
     //_scoreLabel = [SKLabelNode labelNodeWithFontNamed:@"Chalkduster"];
     _scoreLabel = [SKLabelNode labelNodeWithFontNamed:@"MarkerFelt-Wide"];
     //_scoreLabel.text = @"00";
     _scoreLabel.fontColor = [SKColor whiteColor];
     _scoreLabel.horizontalAlignmentMode = SKLabelHorizontalAlignmentModeLeft;
     //_scoreLabel.position = CGPointMake(250 , 20);
-    _scoreLabel.position = CGPointMake(250 , 540);
+    _scoreLabel.position = CGPointMake(220 , 540);
+    
+    // LABEL MELHOR SCORE
     
     [self addChild:_scoreLabel];
 }
@@ -194,6 +201,18 @@
         self.score += 10;
         self.timeScorePedra = 0;
     }
+    
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+
+    int melhorScore = 0;
+    
+    melhorScore = [defaults integerForKey:@"score"];
+    
+    
+    if (self.score > melhorScore) {
+        _scoreLabel.fontColor = [SKColor blueColor];
+    }
     _scoreLabel.text = [NSString stringWithFormat:@"%d",self.score];
+    
 }
 @end
