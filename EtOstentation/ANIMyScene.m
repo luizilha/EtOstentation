@@ -5,7 +5,7 @@
 //  Created by Luiz Ilha Moschem on 8/21/14.
 //  Copyright (c) 2014 ani. All rights reserved.
 //
-//kleiton alves rodrigues batista lindo
+
 #import "ANIMyScene.h"
 #import "ANIGameOver.h"
 
@@ -32,7 +32,7 @@
         
         [self criarCoracao];
         [self initScroe];
-        //testando
+        
     }
     return self;
 }
