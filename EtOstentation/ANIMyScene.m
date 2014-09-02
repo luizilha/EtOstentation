@@ -13,6 +13,9 @@
 
 -(id)initWithSize:(CGSize)size {
     if (self = [super initWithSize:size]) {
+        _somDiamante = [SKAction playSoundFileNamed:@"diamantada.mp3" waitForCompletion:NO];
+        _somPedrada = [SKAction playSoundFileNamed:@"pedrada.mp3" waitForCompletion:NO];
+        _somGameOver = [SKAction playSoundFileNamed:@"gameOver.mp3" waitForCompletion:NO];
         
         NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
         /* Setup your scene here */
@@ -20,12 +23,12 @@
         bg.position = CGPointMake(self.size.width/2, self.size.height/2);
         [self addChild:bg];
         
-        self.planeta = [SKSpriteNode spriteNodeWithImageNamed:@"lua2"];
-        [self.planeta setScale:1.5]; // diminuir a escala do planeta
-        self.planeta.position = CGPointMake(self.size.width/2, self.size.height);
+        self.planeta = [SKSpriteNode spriteNodeWithImageNamed:@"lua"];
+        [self.planeta setScale:0.9]; // diminuir a escala do planeta
+        self.planeta.position = CGPointMake(self.size.width/2, self.size.height + self.size.height * 0.25);
         [self addChild:self.planeta];
         
-        int score = [defaults integerForKey:@"score"];
+        int score = (int) [defaults integerForKey:@"score"];
         NSLog(@"score passado %d ",score);
         
         self.et = [SKSpriteNode spriteNodeWithImageNamed:@"et1"];
@@ -33,14 +36,16 @@
         self.et.zRotation = M_PI; // girar o et de cabeca pra baixo
         self.et.position = CGPointMake(self.size.width/2, self.size.height - self.size.height/4);
         [self addChild:_et];
-        _somDiamante = [SKAction playSoundFileNamed:@"diamantada.mp3" waitForCompletion:NO];
-        _somPedrada = [SKAction playSoundFileNamed:@"pedrada.mp3" waitForCompletion:NO];
-        _somGameOver = [SKAction playSoundFileNamed:@"gameOver.mp3" waitForCompletion:NO];
+        
+        
+        
         [self criarCoracao];
         [self initScroe];
     }
     return self;
 }
+
+
 
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     UITouch *touch = [touches anyObject];
@@ -207,9 +212,6 @@
     if (self.score > 2000) {
         self.scoreLabel.fontColor = [SKColor redColor];
     }
-    
-    
-    
     _scoreLabel.text = [NSString stringWithFormat:@"%d",self.score];
     
 }
