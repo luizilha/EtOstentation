@@ -13,7 +13,7 @@
 -(id) initWithSize:(CGSize)size score:(int)score {
     if(self = [super initWithSize:size]){
         NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-        int melhorScore = [defaults integerForKey:@"score"];
+        int melhorScore = (int) [defaults integerForKey:@"score"];
         
         SKLabelNode *lblMelhorScore = [SKLabelNode labelNodeWithFontNamed:@"MarkerFelt-Wide"];
         lblMelhorScore.fontColor = [SKColor yellowColor];

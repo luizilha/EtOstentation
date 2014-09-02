@@ -10,6 +10,17 @@
 #import "ANIGameOver.h"
 
 @implementation ANIMyScene
+{
+    // Sprites
+    SKSpriteNode *_et;
+    SKSpriteNode *_planeta;
+    SKSpriteNode *_perna;
+    // Sons
+    SKAction *_somDiamante;
+    SKAction *_somPedrada;
+    SKAction *_somGameOver;
+
+}
 
 -(id)initWithSize:(CGSize)size {
     if (self = [super initWithSize:size]) {
@@ -17,27 +28,28 @@
         _somPedrada = [SKAction playSoundFileNamed:@"pedrada.mp3" waitForCompletion:NO];
         _somGameOver = [SKAction playSoundFileNamed:@"gameOver.mp3" waitForCompletion:NO];
         
-        NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+//        NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
         /* Setup your scene here */
         SKSpriteNode *bg = [SKSpriteNode spriteNodeWithImageNamed:@"sky"];
         bg.position = CGPointMake(self.size.width/2, self.size.height/2);
         [self addChild:bg];
         
-        self.planeta = [SKSpriteNode spriteNodeWithImageNamed:@"lua"];
-        [self.planeta setScale:0.9]; // diminuir a escala do planeta
-        self.planeta.position = CGPointMake(self.size.width/2, self.size.height + self.size.height * 0.25);
-        [self addChild:self.planeta];
+        _planeta = [SKSpriteNode spriteNodeWithImageNamed:@"lua"];
+        [_planeta setScale:0.9]; // diminuir a escala do planeta
+        _planeta.position = CGPointMake(self.size.width/2, self.size.height + self.size.height * 0.25);
+        [self addChild:_planeta];
         
-        int score = (int) [defaults integerForKey:@"score"];
-        NSLog(@"score passado %d ",score);
+//        int score = (int) [defaults integerForKey:@"score"];
+
         
-        self.et = [SKSpriteNode spriteNodeWithImageNamed:@"et1"];
-        [self.et setScale:0.15]; // diminuir a escala do et
-        self.et.zRotation = M_PI; // girar o et de cabeca pra baixo
-        self.et.position = CGPointMake(self.size.width/2, self.size.height - self.size.height/4);
+        
+        _et = [SKSpriteNode spriteNodeWithImageNamed:@"et1"];
+        [_et setScale:0.15]; // diminuir a escala do et
+        _et.zRotation = M_PI; // girar o et de cabeca pra baixo
+        _et.position = CGPointMake(self.size.width/2, self.size.height - self.size.height/4);
         [self addChild:_et];
         
-        
+
         
         [self criarCoracao];
         [self initScroe];
@@ -195,7 +207,7 @@
     [self enumerateChildNodesWithName:@"diamante" usingBlock:^(SKNode * node,BOOL * stop){
         
         SKSpriteNode * diamante = (SKSpriteNode *)node;
-        if (CGRectIntersectsRect(diamante.frame, self.et.frame)) {
+        if (CGRectIntersectsRect(diamante.frame, _et.frame)) {
             [diamante removeFromParent];
             self.score += 100;
             [self runAction: _somDiamante];
