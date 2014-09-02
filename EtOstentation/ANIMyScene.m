@@ -49,6 +49,12 @@
         _et.position = CGPointMake(self.size.width/2, self.size.height - self.size.height/4);
         [self addChild:_et];
         
+        _perna = [SKSpriteNode spriteNodeWithImageNamed:@"et_perna"];
+        _perna.position = CGPointMake(_et.size.width - 128, _et.size.height - 300);
+        [_et addChild:_perna];
+        
+        
+        
 
         
         [self criarCoracao];
@@ -75,8 +81,12 @@
 }
 
 -(void)moveEt:(CGFloat)location{
+    _perna.zRotation = M_PI /7;
+    
     SKAction *move = [SKAction moveToX:location duration:0.5];
-    [_et runAction:move];
+    [_et runAction:move completion:^{
+        _perna.zRotation = 0;
+    }];
 }
 
 -(void) addPedra{
