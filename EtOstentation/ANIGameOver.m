@@ -58,6 +58,15 @@
         [start setScale:1];
         start.position = CGPointMake(160, 220);
         [self addChild:start];
+        if(score > melhorScore){
+            SKLabelNode *lblMelhor = [SKLabelNode labelNodeWithFontNamed:@"MarkerFelt-Wide"];
+            lblMelhor.text = [NSString stringWithFormat:@"Novo Record %d",score];
+            lblMelhor.fontSize = 25;
+            lblMelhor.fontColor = [SKColor redColor];
+            lblMelhor.position = CGPointMake(self.size.width/2, self.size.height/2-150);
+            [self addChild:lblMelhor];
+            //NSLog(@"Melhor score %d",score);
+        }
         if (melhorScore < score) {
             [self saveScore:score];
         }
@@ -88,6 +97,5 @@
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     [defaults setInteger:score forKey:@"score"];
     [defaults synchronize];
-    NSLog(@"salvou");
 }
 @end
