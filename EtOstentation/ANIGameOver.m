@@ -8,7 +8,6 @@
 
 #import "ANIGameOver.h"
 #import "ANIMyScene.h"
-
 @implementation ANIGameOver
 -(id) initWithSize:(CGSize)size score:(int)score {
     if(self = [super initWithSize:size]){
@@ -66,6 +65,7 @@
             lblMelhor.position = CGPointMake(self.size.width/2, self.size.height/2-150);
             [self addChild:lblMelhor];
             //NSLog(@"Melhor score %d",score);
+            
         }
         if (melhorScore < score) {
             [self saveScore:score];
@@ -75,6 +75,7 @@
     }
     return  self;
 }
+
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
     UITouch *touch = [touches anyObject];
     CGPoint location = [touch locationInNode:self];
