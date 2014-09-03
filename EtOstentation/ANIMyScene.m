@@ -56,11 +56,9 @@
         _pernaEsq.position = CGPointMake(_et.size.width - 128, _et.size.height - 300);
         [_et addChild:_pernaEsq];
         
-        
-        
-        
-      //  [self rotacaoPlaneta:M_PI velocidade:2 duracao:4];
-        
+        _pernaDir = [SKSpriteNode spriteNodeWithImageNamed:@"et_perna2"];
+        _pernaDir.position = CGPointMake(110, _et.size.height - 300);
+        [_et addChild:_pernaDir];
 
         
         [self criarCoracao];
