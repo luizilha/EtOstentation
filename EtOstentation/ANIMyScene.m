@@ -8,7 +8,7 @@
 
 #import "ANIMyScene.h"
 #import "ANIGameOver.h"
-
+#import <AudioToolbox/AudioToolbox.h>
 @implementation ANIMyScene
 {
     // Sprites
@@ -22,8 +22,10 @@
     SKAction *_somGameOver;
     // rotacao
     int _qtdPedra;
+    
 
 }
+
 
 -(id)initWithSize:(CGSize)size {
     if (self = [super initWithSize:size]) {
@@ -63,12 +65,15 @@
         
         [self criarCoracao];
         [self initScroe];
+        //[self vibrate];
     }
     return self;
 }
 
 
-
+- (void)vibrate {
+    AudioServicesPlaySystemSound (kSystemSoundID_Vibrate);
+}
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     UITouch *touch = [touches anyObject];
     CGPoint touchLocation = [touch locationInNode:self];
@@ -162,6 +167,7 @@
         
         SKSpriteNode * pedra = (SKSpriteNode *)node;
         if (CGRectIntersectsRect(pedra.frame, _et.frame)) {
+            [self vibrate];
             // Aqui vamos tirar uma vida
             [pedra removeFromParent];
             [self removerUmCoracao:lista];
