@@ -19,6 +19,8 @@
     SKAction *_somDiamante;
     SKAction *_somPedrada;
     SKAction *_somGameOver;
+    // rotacao
+    int _qtdPedra;
 
 }
 
@@ -54,6 +56,9 @@
         [_et addChild:_pernaEsq];
         
         
+        
+        
+      //  [self rotacaoPlaneta:M_PI velocidade:2 duracao:4];
         
 
         
@@ -116,6 +121,15 @@
                                                  [SKAction removeFromParent]]]];
         self.pedraTime = 0;
     }
+    _qtdPedra++;
+    if (_qtdPedra>15 ) {
+        NSLog(@"Entrou");
+        if ((_score/10) % 2 == 0) {
+            [self rotacaoPlaneta:M_PI velocidade:3 duracao:4];
+        }else
+            [self rotacaoPlaneta:-M_PI velocidade:3 duracao:4];
+         _qtdPedra = 0;
+    }
 }
 
 -(void) updateWithTimeSinceLastUpdate:(CFTimeInterval)timeSinceLast{
@@ -138,6 +152,7 @@
     [self updateWithTimeSinceLastUpdate:timeSinceLast];
     [self checarColisao];
     [self somaScore];
+    //NSLog(@"score *** %d ***",_score/10);
 }
 
 -(void) checarColisao
@@ -236,5 +251,10 @@
     }
     _scoreLabel.text = [NSString stringWithFormat:@"%d",self.score];
     
+}
+-(void)rotacaoPlaneta:(CGFloat)direcao velocidade:(NSTimeInterval)velocidade duracao:(CGFloat)duracao{
+    SKAction *girar = [SKAction rotateByAngle:direcao duration:velocidade];
+    [_planeta runAction:[SKAction repeatAction:girar count:duracao]];
+    // [sprite runAction:[SKAction repeatActionForever:action]]
 }
 @end
