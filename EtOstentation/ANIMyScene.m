@@ -122,9 +122,8 @@
         self.pedraTime = 0;
     }
     _qtdPedra++;
-    if (_qtdPedra>15 ) {
-        NSLog(@"Entrou");
-        if ((_score/10) % 2 == 0) {
+    if (_qtdPedra>5) {
+        if(arc4random() % 2 == 0) {
             [self rotacaoPlaneta:M_PI velocidade:3 duracao:4];
         }else
             [self rotacaoPlaneta:-M_PI velocidade:3 duracao:4];
