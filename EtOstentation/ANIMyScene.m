@@ -15,6 +15,7 @@
     SKSpriteNode *_et;
     SKSpriteNode *_planeta;
     SKSpriteNode *_pernaEsq;
+    SKSpriteNode *_pernaDir;
     // Sons
     SKAction *_somDiamante;
     SKAction *_somPedrada;
@@ -87,10 +88,11 @@
 
 -(void)moveEt:(CGFloat)location{
     _pernaEsq.zRotation = M_PI /7;
-    
+    _pernaDir.zRotation = -M_PI/8;
     SKAction *move = [SKAction moveToX:location duration:0.5];
     [_et runAction:move completion:^{
         _pernaEsq.zRotation = 0;
+        _pernaDir.zRotation = 0;
     }];
 }
 

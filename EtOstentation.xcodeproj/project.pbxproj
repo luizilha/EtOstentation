@@ -39,6 +39,7 @@
 		72CF32E219AE61F400FCE063 /* EtOstentationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 72CF32E119AE61F400FCE063 /* EtOstentationTests.m */; };
 		72CF32ED19AE633700FCE063 /* ANIStart.m in Sources */ = {isa = PBXBuildFile; fileRef = 72CF32EC19AE633700FCE063 /* ANIStart.m */; };
 		72CF32F019AE63D300FCE063 /* ANIGameOver.m in Sources */ = {isa = PBXBuildFile; fileRef = 72CF32EF19AE63D300FCE063 /* ANIGameOver.m */; };
+		72D34DBC19B7A65000D52046 /* et_perna2.png in Resources */ = {isa = PBXBuildFile; fileRef = 72D34DBB19B7A65000D52046 /* et_perna2.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,6 +93,7 @@
 		72CF32EC19AE633700FCE063 /* ANIStart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANIStart.m; sourceTree = "<group>"; };
 		72CF32EE19AE63D300FCE063 /* ANIGameOver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANIGameOver.h; sourceTree = "<group>"; };
 		72CF32EF19AE63D300FCE063 /* ANIGameOver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANIGameOver.m; sourceTree = "<group>"; };
+		72D34DBB19B7A65000D52046 /* et_perna2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = et_perna2.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +145,7 @@
 				36C3761B19AFAD5A00B687D4 /* meteoro.png */,
 				36C3761C19AFAD5A00B687D4 /* play.png */,
 				36C3761D19AFAD5A00B687D4 /* sky.png */,
+				72D34DBB19B7A65000D52046 /* et_perna2.png */,
 			);
 			name = sprites;
 			sourceTree = "<group>";
@@ -318,6 +321,7 @@
 				7209929319B6555C001A101D /* et_perna.png in Resources */,
 				36C3762219AFAD5A00B687D4 /* lua.png in Resources */,
 				36C3762519AFAD5A00B687D4 /* play.png in Resources */,
+				72D34DBC19B7A65000D52046 /* et_perna2.png in Resources */,
 				36C3762119AFAD5A00B687D4 /* et1.png in Resources */,
 				36C3762619AFAD5A00B687D4 /* sky.png in Resources */,
 				72CF32CF19AE61F400FCE063 /* Images.xcassets in Resources */,
