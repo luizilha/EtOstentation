@@ -22,11 +22,14 @@
     SKAction *_somGameOver;
     // rotacao
     int _qtdPedra;
-
+    BOOL _planetaMovendoDir;
 }
 
 -(id)initWithSize:(CGSize)size {
     if (self = [super initWithSize:size]) {
+        self.physicsWorld.contactDelegate = self;
+        self.physicsWorld.gravity = CGVectorMake(0, 0);
+        _planetaMovendoDir = NO;
         _somDiamante = [SKAction playSoundFileNamed:@"diamantada.mp3" waitForCompletion:NO];
         _somPedrada = [SKAction playSoundFileNamed:@"pedrada.mp3" waitForCompletion:NO];
         _somGameOver = [SKAction playSoundFileNamed:@"gameOver.mp3" waitForCompletion:NO];
@@ -124,6 +127,7 @@
     _qtdPedra++;
     if (_qtdPedra>5) {
         if(arc4random() % 2 == 0) {
+            _planetaMovendoDir = YES;
             [self rotacaoPlaneta:M_PI velocidade:3 duracao:4];
         }else
             [self rotacaoPlaneta:-M_PI velocidade:3 duracao:4];
@@ -151,6 +155,17 @@
     [self updateWithTimeSinceLastUpdate:timeSinceLast];
     [self checarColisao];
     [self somaScore];
+    
+    if (_planetaMovendoDir) {
+        
+        _et.physicsBody.velocity = CGVectorMake(0, -50);
+//        SKAction *move = [SKAction moveToX:0.5 duration:1];
+//        [_et runAction:move completion:^{
+//            _pernaEsq.zRotation = 0;
+//            _pernaDir.zRotation = 0;
+//        }];
+    }
+    
     //NSLog(@"score *** %d ***",_score/10);
 }
 

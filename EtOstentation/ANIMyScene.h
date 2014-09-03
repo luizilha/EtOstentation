@@ -8,7 +8,7 @@
 
 #import <SpriteKit/SpriteKit.h>
 
-@interface ANIMyScene : SKScene 
+@interface ANIMyScene : SKScene <SKPhysicsContactDelegate>
 @property (nonatomic,assign) int pedraTime;
 @property (nonatomic,assign) int timeScorePedra;
 @property (nonatomic,assign) int score;
