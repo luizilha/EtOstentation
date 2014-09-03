@@ -14,7 +14,7 @@
     // Sprites
     SKSpriteNode *_et;
     SKSpriteNode *_planeta;
-    SKSpriteNode *_perna;
+    SKSpriteNode *_pernaEsq;
     // Sons
     SKAction *_somDiamante;
     SKAction *_somPedrada;
@@ -49,9 +49,9 @@
         _et.position = CGPointMake(self.size.width/2, self.size.height - self.size.height/4);
         [self addChild:_et];
         
-        _perna = [SKSpriteNode spriteNodeWithImageNamed:@"et_perna"];
-        _perna.position = CGPointMake(_et.size.width - 128, _et.size.height - 300);
-        [_et addChild:_perna];
+        _pernaEsq = [SKSpriteNode spriteNodeWithImageNamed:@"et_perna"];
+        _pernaEsq.position = CGPointMake(_et.size.width - 128, _et.size.height - 300);
+        [_et addChild:_pernaEsq];
         
         
         
@@ -81,11 +81,11 @@
 }
 
 -(void)moveEt:(CGFloat)location{
-    _perna.zRotation = M_PI /7;
+    _pernaEsq.zRotation = M_PI /7;
     
     SKAction *move = [SKAction moveToX:location duration:0.5];
     [_et runAction:move completion:^{
-        _perna.zRotation = 0;
+        _pernaEsq.zRotation = 0;
     }];
 }
 
