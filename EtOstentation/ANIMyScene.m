@@ -28,8 +28,6 @@
 
 -(id)initWithSize:(CGSize)size {
     if (self = [super initWithSize:size]) {
-        self.physicsWorld.contactDelegate = self;
-        self.physicsWorld.gravity = CGVectorMake(0, 0);
         _planetaMovendoDir = NO;
         _somDiamante = [SKAction playSoundFileNamed:@"diamantada.mp3" waitForCompletion:NO];
         _somPedrada = [SKAction playSoundFileNamed:@"pedrada.mp3" waitForCompletion:NO];
@@ -42,14 +40,13 @@
         [self addChild:bg];
         
         _planeta = [SKSpriteNode spriteNodeWithImageNamed:@"lua"];
-        [_planeta setScale:0.9]; // diminuir a escala do planeta
-        _planeta.position = CGPointMake(self.size.width/2, self.size.height + self.size.height * 0.25);
+        [_planeta setScale:1.4]; // diminuir a escala do planeta
+        _planeta.position = CGPointMake(self.size.width/2, self.size.height/2 + self.size.height);
+//        _planeta.position = CGPointMake(0, self.size.height/2 + self.size.height - self.size.height * -0.1);
         [self addChild:_planeta];
         
 //        int score = (int) [defaults integerForKey:@"score"];
 
-        
-        
         _et = [SKSpriteNode spriteNodeWithImageNamed:@"et1"];
         [_et setScale:0.15]; // diminuir a escala do et
         _et.zRotation = M_PI; // girar o et de cabeca pra baixo
@@ -83,6 +80,7 @@
     
 }
 
+/*
 -(void) touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event{
     UITouch *touch = [touches anyObject];
     CGPoint touchLocation = [touch locationInNode:self];
@@ -90,6 +88,7 @@
     [self moveEt:touchLocation.x];
     
 }
+*/
 
 -(void)moveEt:(CGFloat)location{
     _pernaEsq.zRotation = M_PI /7;
@@ -128,15 +127,15 @@
                                                  [SKAction removeFromParent]]]];
         self.pedraTime = 0;
     }
-    _qtdPedra++;
-    if (_qtdPedra>5) {
-        if(arc4random() % 2 == 0) {
-            _planetaMovendoDir = YES;
-            [self rotacaoPlaneta:M_PI velocidade:3 duracao:4];
-        }else
-            [self rotacaoPlaneta:-M_PI velocidade:3 duracao:4];
-         _qtdPedra = 0;
-    }
+//    _qtdPedra++;
+//    if (_qtdPedra>5) {
+//        if(arc4random() % 2 == 0) {
+//            _planetaMovendoDir = YES;
+//            [self rotacaoPlaneta:M_PI velocidade:3 duracao:4];
+//        }else
+//            [self rotacaoPlaneta:-M_PI velocidade:3 duracao:4];
+//         _qtdPedra = 0;
+//    }
 }
 
 -(void) updateWithTimeSinceLastUpdate:(CFTimeInterval)timeSinceLast{
@@ -212,9 +211,9 @@
     //coracao1.position = CGPointMake(50, 30);
     //coracao2.position = CGPointMake(77, 30);
     //coracao3.position = CGPointMake(104, 30);
-    coracao1.position = CGPointMake(50, 550);
-    coracao2.position = CGPointMake(77, 550);
-    coracao3.position = CGPointMake(104, 550);
+    coracao1.position = CGPointMake(50, self.size.height-15);
+    coracao2.position = CGPointMake(77, self.size.height-15);
+    coracao3.position = CGPointMake(104, self.size.height-15);
     
     [self addChild: coracao3];
     [self addChild:coracao2];
@@ -240,7 +239,7 @@
     _scoreLabel.fontColor = [SKColor whiteColor];
     _scoreLabel.horizontalAlignmentMode = SKLabelHorizontalAlignmentModeLeft;
     //_scoreLabel.position = CGPointMake(250 , 20);
-    _scoreLabel.position = CGPointMake(220 , 540);
+    _scoreLabel.position = CGPointMake(220 , self.size.height-30);
     
     // LABEL MELHOR SCORE
     

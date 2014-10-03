@@ -16,7 +16,7 @@
     [super viewWillLayoutSubviews];
     
     NSError *erro;
-    NSURL *bgUrlAudio = [[NSBundle mainBundle] URLForResource:@"bg-music" withExtension:@"caf"];
+    NSURL *bgUrlAudio = [[NSBundle mainBundle] URLForResource:@"bg" withExtension:@"aiff"];
     self.bgAudio = [[AVAudioPlayer alloc] initWithContentsOfURL:bgUrlAudio error:&erro];
     self.bgAudio.numberOfLoops = -1;
     [self.bgAudio prepareToPlay];

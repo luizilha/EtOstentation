@@ -17,8 +17,8 @@
         [self addChild:bg];
         
         SKSpriteNode *planeta = [SKSpriteNode spriteNodeWithImageNamed:@"lua"];
-        [planeta setScale:0.73]; // diminuir a escala do planeta
-        planeta.position = CGPointMake(0, self.size.height/2 + self.size.height - self.size.height * 0.78);
+        [planeta setScale:1.3]; // diminuir a escala do planeta
+        planeta.position = CGPointMake(0, self.size.height/2 + self.size.height - self.size.height * 0.5);
         [bg addChild:planeta];
         
         SKSpriteNode *start = [SKSpriteNode spriteNodeWithImageNamed:@"play"];
